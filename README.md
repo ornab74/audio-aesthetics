@@ -2,6 +2,13 @@
 
 **Live, configurable audio fault detection for streamers, musicians, podcast hosts, DJs, and live sound engineers.**
 
+
+#### Dashboard Preview
+![Audio Aesthetics Dashboard](image.png)
+
+#### Audio Monitoring Preview
+![Audio Aesthetics Monitoring](image2.png)
+
 This is a **runnable Python/Flutter source-code MVP**, inspired by the supplied Humoid PRISM theme and distributed alongside the supplied PRISM source in `prism_reference/`. It is not a claim of a production-trained, benchmarked “audio aesthetics” classifier. The deterministic signal checks work offline. Subjective audio judgments require a genuine Clef-Omni decision-model service configured by you. The storefront can initiate paid Stripe subscriptions after operator setup.
 
 ## Quick start: 3 commands (Python backend + sales page)
