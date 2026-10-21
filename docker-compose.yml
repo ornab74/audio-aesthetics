@@ -1,0 +1,12 @@
+services:
+  audio-aesthetics:
+    build: .
+    ports:
+      - '127.0.0.1:8788:8788'
+    environment:
+      AESTHETICS_HOST: 0.0.0.0
+      AESTHETICS_ACCESS_TOKEN: ${AESTHETICS_ACCESS_TOKEN:?Set a random local API token}
+      AESTHETICS_DB: /data/aesthetics.sqlite3
+    volumes:
+      - ./data:/data
+    restart: unless-stopped

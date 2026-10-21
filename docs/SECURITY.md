@@ -1,0 +1,10 @@
+# Security, privacy and operational safety
+
+- **Local by default.** `python run.py` binds `127.0.0.1:8788`. Avoid public binding until you have HTTPS + WSS, reverse-proxy Origin checks, auth, bot controls, request rate limits, and monitoring. `docker-compose.yml` maps its port to host loopback and requires an explicit local access token.
+- **Raw audio is transient.** The engine retains up to roughly 32 seconds of PCM in RAM per session. It does not save incoming streams, transcriptions, images or WAV snapshots to disk. Live audio in RAM exists until the session ends. `POST /api/analyze-wav` processes the uploaded file in memory.
+- **Cloud audio is explicitly opt-in** via `clef=cloud`. In that case, WAV snippets leave the machine for Cloudflare. Local `clef=local` sends audio to the configured local server, which could have its own data retention policies. DSP-only sends no audio off the device.
+- **WebSocket authentication.** Set `AESTHETICS_ACCESS_TOKEN` if you expose the API on anything beyond loopback. Flutter supplies it as the initial WebSocket message (not in URL query). A public deployment additionally needs CSRF/Origin protection for browser WebSockets, TLS at ingress, per-socket limits and rate limits.
+- **No automatic light-control commands beyond OSC.** OSC is emitted only to `127.0.0.1` and the environment-configured UDP port. Receivers should apply additional authorization/interlocks. Never use alerts as the sole safety control for concerts.
+- **Stripe keys only on the backend.** Webhook signatures are verified. Subscription license tokens are stored hashed in SQLite. Do not share token or checkout callback URL in logs.
+- **Public SaaS hardening TODOs.** Add authenticated user accounts, account recovery, anti-abuse throttles, message-bus jobs for long AI calls, persistent structured alert history with user consent, Stripe reconciliation, durable database migrations/backups, support channels and deletion policies.
+- **No magic “AI engineer.”** Even Clef may hallucinate quality faults. Focus on alerts with measurable ground truth; calibrate false-positive/false-negative rates per venue.

@@ -1,0 +1,8 @@
+fastapi>=0.115,<1
+uvicorn>=0.30,<1
+httpx>=0.27,<1
+cryptography>=43,<48
+pydantic>=2.9,<3
+# Optional local inference: install only one or both when supported by your platform.
+# pip install 'llama-cpp-python[server]'
+# pip install litert-lm-api

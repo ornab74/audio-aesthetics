@@ -1,0 +1,18 @@
+Audio_Aesthetics_PRISM_Full_Source.zip
+flutter/
+# Ignore Flutter folder and everything inside
+**/flutter/
+
+# Ignore Python environment variables
+.env
+**/.env
+.env.*
+!.env.example
+
+# Ignore Python virtual environments
+.venv/
+venv/
+env/
+**/.venv/
+**/venv/
+**/env/

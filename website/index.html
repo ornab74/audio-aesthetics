@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Audio Aesthetics: live sound quality detection for musicians, streamers, and concert engineers. Local open-source engine and $20/mo Pro.">
+  <title>Audio Aesthetics — Hear the problem before your audience does</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+<header class="navigation wrap">
+  <a class="brand" href="#top" aria-label="Audio Aesthetics home"><span class="mark">◉</span><span>AUDIO<span class="ghost"> / </span>AESTHETICS<small>BY PRISM LABS • LOCAL FIRST</small></span></a>
+  <nav aria-label="Site navigation"><a href="#engine">Engine</a><a href="#who">Use cases</a><a href="#pricing">Pricing</a><a href="#foss">Open source</a></nav>
+  <a class="small-cta" href="#pricing">GET PRO <span aria-hidden="true">↗</span></a>
+</header>
+<main id="top">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <section class="hero wrap">
+    <div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> AN EXTRA PAIR OF EARS FOR EVERY MIX</div>
+      <h1>HEAR THE <em>PROBLEM.</em><br><span>BEFORE THEY DO.</span></h1>
+      <p>Live audio intelligence for the moments when you're performing, streaming, or mixing — and can't hear everything going wrong.</p>
+      <div class="actions"><a href="#pricing" class="button primary">EXPLORE PRO <span>↗</span></a><a href="#foss" class="button secondary">RUN LOCAL & FREE <span>→</span></a></div>
+      <div class="facts"><span><b>30+</b> prebuilt checks</span><span><b>0.5s</b> signal analysis hops</span><span><b>∞</b> local sessions</span></div>
+    </div>
+    <div class="hero-visual" aria-label="Illustrative monitoring dashboard; values are not live readings">
+      <div class="appbar"><span><span class="mini-icon">◉</span> AESTHETICS ENGINE <span class="muted">// MONITOR 01</span></span><span class="ok"><i></i> DEMO</span></div>
+      <div class="screen-head"><div><span class="micro">ACTIVE PROFILE</span><h3>STREAMER MODE</h3></div><span class="status"><span class="pulse"></span> LISTENING PREVIEW</span></div>
+      <div class="wave" id="wave" aria-hidden="true"></div>
+      <div class="readouts"><div><span>PEAK / dBFS</span><b>−9.2</b><div class="meter"><i style="width:73%"></i></div></div><div><span>RMS / dBFS</span><b>−20.7</b><div class="meter"><i style="width:56%"></i></div></div><div><span>CLIP EVENTS</span><b>00</b><div class="meter"><i style="width:8%"></i></div></div></div>
+      <div class="warning"><span class="alert-symbol">!</span><div><strong>Silent warning • example</strong><small>Potential vocal clipping detected</small></div><span>02:14</span></div>
+      <p class="screen-disclaimer">Product preview • illustrative readings only</p>
+    </div>
+  </section>
+  <section class="strip" aria-label="Product capabilities"><div class="wrap features-row"><span>◈ STREAM QUALITY</span><span>◈ TUNING + VOCALS</span><span>◈ BEAT / LEVELS</span><span>◈ PRIVATE ALERTS</span><span>◈ LOCAL AI</span></div></section>
+  <section class="section wrap" id="engine"><div class="section-kicker">01 / THE ENGINE</div><h2>ONE SYSTEM.<br><em>MULTIPLE WAYS TO LISTEN.</em></h2><p class="intro">Measure what instruments can measure. Ask AI to judge what needs an ear. Keep the two separate so your alerts stay meaningful.</p>
+    <div class="feature-grid">
+      <article class="feature"><span class="glyph">⌁</span><span class="micro">LAYER 01</span><h3>Instant signal forensics</h3><p>Clipping, RMS and peak levels, silence, dropouts, transients, DC offset, spectral imbalance, phase risk and more. Local math, no AI required.</p><span class="feature-footer">FAST DSP • OFFLINE</span></article>
+      <article class="feature"><span class="glyph">✧</span><span class="micro">LAYER 02</span><h3>Clef-Omni judgment</h3><p>Evaluates audio against typed questions such as “Are the vocals buried?” or “Does the guitar sound detuned?” Use Cloudflare or your own model server.</p><span class="feature-footer">AUDIO + INSTRUCTIONS</span></article>
+      <article class="feature"><span class="glyph">◎</span><span class="micro">LAYER 03</span><h3>Warnings, not interruptions</h3><p>Silent UI notifications with repeat suppression, plus optional OSC messages to lighting or control software. Don't blast alerts into the broadcast.</p><span class="feature-footer">SILENT • EVENT-DRIVEN</span></article>
+    </div>
+  </section>
+  <section class="section modes-wrap" id="who"><div class="wrap"><div class="section-kicker">02 / PROFILES</div><h2>YOUR SOUND.<br><em>YOUR FAILURE MODES.</em></h2><p class="intro">Start with a preset, then switch individual detectors on or off.</p>
+    <div class="modes"><span>◉ STREAMER</span><span>♫ ARTIST</span><span>♬ GUITAR</span><span>↗ VOCALS</span><span>⌁ LEVELS</span><span>✦ CONCERT</span><span>◈ DJ</span><span>○ PODCAST</span><span>▤ MASTERING</span><span>+ CUSTOM</span></div>
+    <div class="custom-callout"><div><span class="micro">CUSTOM DETECTORS</span><h3>“Does my snare suddenly disappear?”</h3><p>Write a specific question in plain English. The model responds with a likelihood you can turn into an alert. You define what matters.</p></div><span class="spark">✧</span></div>
+  </div></section>
+  <section class="section wrap" id="pricing"><div class="section-kicker">03 / PRICING</div><h2>OPEN BY DEFAULT.<br><em>PRO WHEN YOU NEED IT.</em></h2><div class="pricing-grid">
+    <article class="price-card"><p class="plan">COMMUNITY / FOSS</p><div class="price">$0 <small>forever</small></div><p>Run everything on your own hardware with complete source access.</p>
+      <ul><li>Unlimited local sessions</li><li>All signal-analysis checks</li><li>Configurable detection profiles</li><li>Local Clef-Omni endpoint support</li><li>Custom questions and OSC alerts</li><li>No forced cloud account</li></ul>
+      <a href="#foss" class="button secondary full">GET THE SOURCE <span>↓</span></a>
+    </article>
+    <article class="price-card pro"><div class="popular">HOSTED CONVENIENCE</div><p class="plan">AESTHETICS / PRO</p><div class="price">$20 <small>/ month</small></div><p>Everything in Community, plus managed Clef-Omni access when deployed and configured.</p>
+      <ul><li>Unlimited monitoring sessions</li><li>Hosted cloud AI decision path</li><li>All presets and custom detectors</li><li>Stream, stage, podcast and studio</li><li>Subscription self-management</li><li>Cancel through Stripe portal</li></ul>
+      <form id="checkout-form"><label for="customer-email">EMAIL FOR CHECKOUT</label><input id="customer-email" type="email" required placeholder="you@studio.com" autocomplete="email"><button class="button primary full" type="submit">SUBSCRIBE WITH STRIPE <span>↗</span></button></form>
+      <div class="subscription-help"><label for="manage-key">ALREADY A MEMBER?</label><input id="manage-key" type="password" autocomplete="off" placeholder="Pro access key"><button class="button secondary full" type="button" id="manage-subscription">MANAGE / CANCEL SUBSCRIPTION <span>↗</span></button></div>
+      <p class="fine">Billed monthly via Stripe. Cloud processing depends on service capacity and fair-use safeguards. Payment is unavailable until an operator connects live Stripe credentials.</p>
+    </article>
+  </div><div role="status" aria-live="polite" id="billing-message"></div></section>
+  <section class="section local-section" id="foss"><div class="wrap local-layout"><div><div class="section-kicker">04 / BUILD YOUR OWN</div><h2>YOUR MACHINE.<br><em>YOUR MIX.</em></h2><p>Audio Aesthetics includes a Python WebSocket engine, Flutter client, custom detection catalog, local Clef-Omni adapter, and an optional system-loopback audio bridge.</p>
+    <div class="actions"><a href="/assets/README.txt" class="button secondary">READ THE LOCAL SETUP →</a></div></div><div class="terminal" aria-label="Local install commands"><div class="terminal-head"><span>● ● ●</span> LOCALHOST / TERMINAL</div><pre><code><span class="comment"># Audio processing stays on your machine</span>
+cd engine
+pip install -r requirements.txt
+python run.py
+
+<span class="comment"># Open product storefront</span>
+http://127.0.0.1:8788
+
+<span class="comment"># Optional system-output capture</span>
+python -m aesthetics.capture --list-devices</code></pre></div></div></section>
+</main>
+<footer class="footer wrap"><div><b>AUDIO / AESTHETICS</b><span>HUMOID PRISM-inspired • Independent proof of concept</span></div><div><a href="https://developers.cloudflare.com/workers-ai/models/clef-omni/" rel="noopener noreferrer" target="_blank">CLEF DOCS ↗</a><a href="#top">TOP ↑</a></div><small>No model weights included. Not affiliated with Cloudflare. Audio is only sent to a cloud provider when cloud mode is explicitly enabled.</small></footer>
+<div class="modal" id="license-modal" hidden><div class="license-inner" role="dialog" aria-modal="true" aria-labelledby="license-title"><h2 id="license-title">YOUR PRO ACCESS KEY</h2><p>Copy this key into the Flutter app → Pro License Token. It's revealed only once.</p><textarea readonly id="license-key" rows="3"></textarea><button class="button primary" id="copy-license">COPY KEY</button><button class="button secondary" id="close-license">CLOSE</button></div></div>
+</body>
+</html>
