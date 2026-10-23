@@ -2,7 +2,7 @@
 
 **Live, configurable audio fault detection for streamers, musicians, podcast hosts, DJs, and live sound engineers.**
 
-
+## Credits to twitch.tv/beginbot for the idea ( he created an aesthetics model on stream to rate audio that chat created )
 #### Dashboard Preview
 ![Audio Aesthetics Dashboard](image.png)
 
